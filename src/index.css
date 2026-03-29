@@ -1,0 +1,266 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #111827;
+  background: #0f172a;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(99, 102, 241, 0.22), transparent 40%),
+    radial-gradient(circle at bottom, rgba(236, 72, 153, 0.16), transparent 38%),
+    #0f172a;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-shell {
+  min-height: 100vh;
+}
+
+/* top nav */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(12px);
+  background: rgba(8, 15, 35, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.95rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.nav-link {
+  padding: 0.65rem 0.95rem;
+  border-radius: 999px;
+  color: #c7d2fe;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* home */
+
+.home {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.25rem 3rem;
+}
+
+.center-wrap {
+  width: 100%;
+  max-width: 980px;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.logo {
+  font-size: clamp(3rem, 6vw, 4.4rem);
+  margin: 0 0 0.55rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+}
+
+.tagline {
+  color: #c7d2fe;
+  margin: 0 0 1.8rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.video-container {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 14px;
+  border-radius: 24px;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  margin: 0 auto 1.8rem;
+  max-width: 100%;
+}
+
+.main-video {
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+  background: #000000;
+}
+
+.description {
+  color: #e5e7eb;
+  max-width: 720px;
+  margin: 0 auto 1.8rem;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.45rem;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 0.98rem;
+  transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.18s ease;
+}
+
+.primary-btn {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.14);
+}
+
+.secondary-btn {
+  background: #6366f1;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.25);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.97;
+}
+
+.legal-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  font-size: 0.95rem;
+  opacity: 0.92;
+}
+
+.legal-links a {
+  color: #c7d2fe;
+  font-weight: 700;
+  transition: color 0.18s ease, opacity 0.18s ease;
+}
+
+.legal-links a:hover {
+  color: #ffffff;
+}
+
+/* responsive */
+
+@media (max-width: 900px) {
+  .topbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .center-wrap {
+    padding: 1.3rem;
+    border-radius: 24px;
+  }
+
+  .logo {
+    font-size: 2.7rem;
+  }
+
+  .tagline {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .home {
+    padding: 1.5rem 0.9rem 2rem;
+  }
+
+  .center-wrap {
+    padding: 1rem;
+  }
+
+  .video-container {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .main-video {
+    border-radius: 12px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .legal-links {
+    gap: 0.85rem;
+    font-size: 0.88rem;
+  }
+}
