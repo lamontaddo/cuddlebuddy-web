@@ -36,7 +36,10 @@ export default function HomePage() {
             preload="metadata"
             onClick={handleVideoClick}
           >
-            <source src="/videos/cuddlebuddy2.mp4" type="video/mp4" />
+            <source
+              src={`${import.meta.env.BASE_URL}videos/cuddlebuddy2.mp4`}
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
 
