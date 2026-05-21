@@ -1,18 +1,37 @@
 const effectiveDate = 'March 29, 2026';
 
+const legalPageStyle = {
+  width: '100%',
+  maxWidth: 900,
+  margin: '0 auto',
+  padding: '96px 20px 64px',
+  boxSizing: 'border-box',
+};
+
+const sectionStyle = {
+  width: '100%',
+  boxSizing: 'border-box',
+};
+
+const copyStyle = {
+  maxWidth: 760,
+  overflowWrap: 'anywhere',
+  wordBreak: 'normal',
+};
+
 function PolicySection({ title, children }) {
   return (
-    <section className="policy-section">
+    <section className="policy-section" style={sectionStyle}>
       <h2>{title}</h2>
-      <div className="policy-copy">{children}</div>
+      <div className="policy-copy" style={copyStyle}>{children}</div>
     </section>
   );
 }
 
 export default function PrivacyPage() {
   return (
-    <div className="legal-page">
-      <div className="legal-hero">
+    <div className="legal-page" style={legalPageStyle}>
+      <div className="legal-hero" style={sectionStyle}>
         <span className="eyebrow">Legal</span>
         <h1>Privacy Policy</h1>
         <p>
@@ -33,8 +52,9 @@ export default function PrivacyPage() {
         </p>
         <p>
           We may process location-related data to help show nearby providers and support
-          booking logistics. Payment information is processed through Stripe. We do not
-          store full card details on our servers.
+          booking logistics. Payments and payouts may be processed through PayPal or
+          other third-party payment providers. We do not store full payment account,
+          card, or PayPal login details on our servers.
         </p>
       </PolicySection>
 
@@ -49,8 +69,9 @@ export default function PrivacyPage() {
       <PolicySection title="3. How information may be shared">
         <p>
           We may share limited information with other users when needed for confirmed
-          bookings, with Stripe for payment processing and payouts, with vendors that help
-          operate the service, or when required by law or to protect rights and safety.
+          bookings, with PayPal or other payment providers for payment processing and
+          payouts, with vendors that help operate the service, or when required by law
+          or to protect rights and safety.
         </p>
         <p>We do not sell personal information.</p>
       </PolicySection>

@@ -1,18 +1,37 @@
 const effectiveDate = 'March 29, 2026';
 
+const legalPageStyle = {
+  width: '100%',
+  maxWidth: 900,
+  margin: '0 auto',
+  padding: '96px 20px 64px',
+  boxSizing: 'border-box',
+};
+
+const sectionStyle = {
+  width: '100%',
+  boxSizing: 'border-box',
+};
+
+const copyStyle = {
+  maxWidth: 760,
+  overflowWrap: 'anywhere',
+  wordBreak: 'normal',
+};
+
 function TermsSection({ title, children }) {
   return (
-    <section className="policy-section">
+    <section className="policy-section" style={sectionStyle}>
       <h2>{title}</h2>
-      <div className="policy-copy">{children}</div>
+      <div className="policy-copy" style={copyStyle}>{children}</div>
     </section>
   );
 }
 
 export default function TermsPage() {
   return (
-    <div className="legal-page">
-      <div className="legal-hero">
+    <div className="legal-page" style={legalPageStyle}>
+      <div className="legal-hero" style={sectionStyle}>
         <span className="eyebrow">Legal</span>
         <h1>Terms of Service</h1>
         <p>
@@ -46,17 +65,19 @@ export default function TermsPage() {
 
       <TermsSection title="4. Bookings, payments, and payouts">
         <p>
-          Clients may be charged in advance through Stripe. Payouts to providers may be
-          delayed for review, safety checks, disputes, or refund handling. Platform fees may
-          apply.
+          Clients may be charged in advance through PayPal or another supported payment
+          provider. Provider payouts may be requested through the platform and may be
+          delayed for admin review, safety checks, disputes, refund handling, or payment
+          processor requirements. Platform fees may apply.
         </p>
       </TermsSection>
 
       <TermsSection title="5. Reports, disputes, and refunds">
         <p>
-          CuddleBuddy may review reports, hold payouts, cancel bookings, issue refunds, or
-          take other action when a dispute, safety concern, or platform rule violation is
-          reported.
+          CuddleBuddy may review reports, hold payouts, cancel bookings, issue refunds,
+          release payouts, or take other action when a dispute, safety concern, no-show,
+          early ending, or platform rule violation is reported. Refunds and payouts may
+          depend on booking status, payment status, session outcome, and admin review.
         </p>
       </TermsSection>
 

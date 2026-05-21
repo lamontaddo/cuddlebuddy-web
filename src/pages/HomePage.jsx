@@ -56,12 +56,20 @@ export default function HomePage() {
 
         <div className="buttons">
           <a
-            href="https://cuddlebuddy.me"
+            href="https://app.cuddlebuddy.me"
             target="_blank"
             rel="noreferrer"
             className="primary-btn"
           >
-            Visit Platform
+            Open App
+          </a>
+          <a
+            href="https://app.cuddlebuddy.me"
+            target="_blank"
+            rel="noreferrer"
+            className="secondary-btn"
+          >
+            Sign Up / Log In
           </a>
 
           <Link to="/safety" className="secondary-btn">
