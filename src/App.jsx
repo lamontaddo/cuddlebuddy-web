@@ -4,7 +4,7 @@ import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
 import SafetyPage from "./pages/SafetyPage";
 import RefundsPage from "./pages/RefundsPage";
-
+import CuddlerOnboardingPage from "./pages/CuddlerOnboardingPage";
 function App() {
   return (
     <div className="site-shell">
@@ -17,6 +17,9 @@ function App() {
           <nav className="nav">
             <NavLink to="/" className="nav-link">
               Home
+            </NavLink>
+            <NavLink to="/cuddler-onboarding" className="nav-link">
+              Cuddler Guide
             </NavLink>
             <NavLink to="/privacy" className="nav-link">
               Privacy
@@ -40,6 +43,7 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/safety" element={<SafetyPage />} />
         <Route path="/refunds" element={<RefundsPage />} />
+        <Route path="/cuddler-onboarding" element={<CuddlerOnboardingPage />} />
       </Routes>
     </div>
   );
